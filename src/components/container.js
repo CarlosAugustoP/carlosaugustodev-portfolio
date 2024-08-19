@@ -8,7 +8,7 @@ export default function AboutContainer({ header, text, img, direction}) {
                 <h1 className="text-[6.6vw] font-bold leading-none text-white">{header}</h1>
                 <p className="text-[1.55vw] text-white">{text}</p>
             </div>
-            <img src={img} className='w-1/2 rounded-lg border-white border-4' alt='Carlos Augusto' />
+                <img src={img} className='w-1/2 rounded-lg border-white border-4' alt='Carlos Augusto' />
         </div>
     );
 }

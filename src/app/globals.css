@@ -10,3 +10,29 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     
 }
+
+.card-wrapper {
+    @apply relative bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl
+    overflow-hidden
+    ;
+
+}
+
+.card-wrapper::before {
+    background: conic-gradient(
+        rgba(244,114,182,0.5) 0deg,
+        rgba(192,132,252,0.5) 0deg,
+        transparent 100deg
+    );
+
+    @apply absolute h-[150%] w-[150%] left-[-25%] top-[-25%] content-[''] 
+    animate-border-spin;
+    }
+
+
+
+.card-content {
+    @apply absolute w-[calc(100%~2px)] h-[calc(100%-2px)] top-[1px] left-[1px] bg-gradient-to-b  from-slate-800
+  to-slate-900 rounded-2xl;
+
+}
