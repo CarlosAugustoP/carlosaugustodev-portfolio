@@ -17,7 +17,12 @@ export default function home() {
       </div>
       <div className='w-full flex items-center justify-center'>
         <div className='flex gap-16 w-3/5'>
-        <AboutContainer header = 'CESAR school' text = 'Estudo na CESAR school, faculdade nota 5 no conceito MEC que prioriza inovação e trabalho em equipe, nos integrando diretamente com o porto digital. Estou atualmente no 5 período e planejo me formar em 2026!' img = 'img/cesar.png' direction='flex-row-reverse'/>
+        <AboutContainer header = 'CESAR school' text = 'I study Computer Science at CESAR School, which prioritizes innovation and teamwork and directly integrates us with Porto Digital, one of the biggest digital centers in South America. I am currently in my 5th semester!' img = 'img/cesar.png' direction='flex-row-reverse'/>
+        </div>
+      </div>
+      <div className='w-full flex items-center justify-center mb-40'>
+        <div className='flex gap-16 w-3/5'>
+        <AboutContainer header = 'About Me (:' text = "Ever since i was little, i've been in love with computers. Whether it's the internet, games, hardware or software, working with Computer Science is a dream come true! In my free time, i love playing games, drawing, hitting the gym and travelling!" img = 'img/viagem.jpeg'/>
         </div>
       </div>
     </div>
