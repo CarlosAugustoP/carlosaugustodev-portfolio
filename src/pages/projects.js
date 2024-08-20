@@ -17,7 +17,7 @@ function Projects() {
   const projects = [
     {
       title: 'Construtora P&V',
-      description: 'Em Fevereiro de 2024, tive o prazer de contribuir em um projeto freelance para a criação do site oficial da construtora Peixoto e Vasconcelos',
+      description: 'It was an honor to develop and create the Peixoto and Vasconcelos Constructing company website!',
       image1: 'https://via.placeholder.com/1920x1080?text=Project+1+Image+1',
       image2: 'https://via.placeholder.com/1920x1080?text=Project+1+Image+2',
       image3: 'https://via.placeholder.com/1920x1080?text=Project+1+Image+3',
@@ -27,57 +27,66 @@ function Projects() {
     },
     {
       title: 'eHospital',
-      description: 'Description 2',
+      description: 'eHospital was a Hospital Management system built for my DB discipline. It utilizes a sleek next, react and tailwind interfaceto comunicate with a Spring-Boot built API, using JDBC template for sql manipulation.',
       image1: 'https://via.placeholder.com/1920x1080?text=Project+2+Image+1',
       image2: 'https://via.placeholder.com/1920x1080?text=Project+2+Image+2',
       image3: 'https://via.placeholder.com/1920x1080?text=Project+2+Image+3',
       githubLink: 'https://github.com',
-      deployLink: 'https://deploy.com'
+      deployLink: 'https://deploy.com',
+      stack : ['img/css.svg', 'img/js.svg', 'img/react.svg', 'img/next.svg', 'img/mysql.svg', 'img/springboot.svg', 'img/tailwind.svg', 'img/java.svg']
     },
     {
       title: 'Morfeu',
-      description: 'Description 3',
+      description: 'Built for Banco do Brasil and CESAR org, Morfeu utilized machine learning to generate synthetic data, in a user-friendly manner.',
       image1: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+1',
       image2: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+2',
       image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
       githubLink: 'https://github.com',
-      deployLink: 'https://deploy.com'
+      deployLink: 'https://deploy.com',
+      stack : ['img/react.svg', 'img/python.svg', 'img/tailwind.svg', 'img/tensorflow.svg', 'img/keras.svg', 'img/js.svg', 'img/css.svg'] 
     },
     {
         title: 'this.website',
-        description: 'Description 3',
+        description: 'My Portfolio! Had quite a lot of fun building it, and I hope you enjoy it as much as I did!',
         image1: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+1',
         image2: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+2',
         image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
         githubLink: 'https://github.com',
-        deployLink: 'https://deploy.com'
+        deployLink: 'https://deploy.com',
+        stack : ['img/react.svg', 'img/next.svg', 'img/tailwind.svg', 'img/js.svg', 'img/css.svg']
+
       },
       {
         title: 'GymBro',
-        description: 'Description 3',
+        description: 'GymBro was my first ever software project, and it was built to help people track their workouts and progress. It was built using Django, Python, AWS and SQLite with unit tests using Selenium.',
         image1: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+1',
         image2: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+2',
         image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
         githubLink: 'https://github.com',
-        deployLink: 'https://deploy.com'
+        deployLink: 'https://deploy.com',
+        stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/django.svg', 'img/python.svg', 'img/aws.svg', 'img/sqlite.svg']
+
       },
       {
         title: 'PetGram',
-        description: 'Description 3',
+        description: 'PetGram is a social media platform for pets! It was built using Django, Python, and standard html and css. I built it to practice my basic developing skills and to have a bit of fun!',
         image1: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+1',
         image2: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+2',
         image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
         githubLink: 'https://github.com',
-        deployLink: 'https://deploy.com'
+        deployLink: 'https://deploy.com',
+        stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/django.svg', 'img/python.svg', 'img/sqlite.svg']
+
       },
       {
         title: 'Bridge',
-        description: 'Description 3',
+        description: 'Bridge is a project built for the discipline of Projects 3 for the client Caçadores de bons exemplos, using html, css and Django once again.',
         image1: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+1',
         image2: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+2',
         image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
         githubLink: 'https://github.com',
-        deployLink: 'https://deploy.com'
+        deployLink: 'https://deploy.com',
+        stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/tailwind.svg','img/django.svg', 'img/python.svg', 'img/sqlite.svg']
       },
       {
         title: 'Other Project',
