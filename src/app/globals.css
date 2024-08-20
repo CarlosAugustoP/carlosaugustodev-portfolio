@@ -36,3 +36,19 @@ html, body {
   to-slate-900 rounded-2xl;
 
 }
+
+@keyframes swipeRight {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .project-info {
+    animation: swipeRight 0.5s ease-in-out;
+  }
+  

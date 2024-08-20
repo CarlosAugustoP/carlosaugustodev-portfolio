@@ -18,7 +18,8 @@ module.exports = {
         'border-spin': 'border-spin 7s linear infinite',
       },
       fontSize: {
-        '10xl': '5rem', // Adjust the size as needed
+        '10xl': '5rem',
+        '6xl':'2.5rem' // Adjust the size as needed
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
