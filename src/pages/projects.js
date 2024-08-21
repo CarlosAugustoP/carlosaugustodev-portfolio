@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import '../app/globals.css';
 import Navbar from '@/components/navbar';
 import { ProjectInfo } from '@/components/projectcontainer';
+
 function Projects() {
   const images = [
-    'https://via.placeholder.com/1920x1080?text=Image+1',
+    'img/sample/PV/main.png',
     'https://via.placeholder.com/1920x1080?text=Image+2',
     'https://via.placeholder.com/1920x1080?text=Image+3',
     'https://via.placeholder.com/1920x1080?text=Image+4',
-    'https://via.placeholder.com/1920x1080?text=Image+5',
+    'img/sample/GymBro/main.png',
     'https://via.placeholder.com/1920x1080?text=Image+6',
     'https://via.placeholder.com/1920x1080?text=Image+7',
     'https://via.placeholder.com/1920x1080?text=Image+8'
@@ -59,9 +60,9 @@ function Projects() {
       {
         title: 'GymBro',
         description: 'GymBro was my first ever software project, and it was built to help people track their workouts and progress. It was built using Django, Python, AWS and SQLite with unit tests using Selenium.',
-        image1: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+1',
-        image2: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+2',
-        image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
+        image1: 'img/sample/GymBro/1.png',
+        image2: 'img/sample/GymBro/2.png',
+        image3: 'img/sample/GymBro/3.png',
         githubLink: 'https://github.com',
         deployLink: 'https://deploy.com',
         stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/django.svg', 'img/python.svg', 'img/aws.svg', 'img/sqlite.svg']
@@ -147,10 +148,6 @@ function Projects() {
         width: '100%',
         position: 'relative',
         overflow: 'hidden',
-        backgroundImage: `url(${images[imageIndex]})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        transition: 'background-image 0.5s ease-in-out',
         display:'flex',
         flexDirection:'column',
         alignItems:'center',
@@ -158,6 +155,18 @@ function Projects() {
       }}
     >
         <Navbar />
+        <div
+          style={{
+            width: '100%',
+            height: '100%',
+            backgroundImage: `url(${images[imageIndex]})`,
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            transition: 'background-image 0.5s ease-in-out',
+            backgroundColor: 'black',
+          }}
+        />
         <ProjectInfo 
           title={projects[projectIndex].title}
           description={projects[projectIndex].description}
