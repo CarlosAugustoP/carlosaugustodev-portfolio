@@ -12,7 +12,7 @@ export default function home() {
       <img className  = 'absolute h-64 left-0 top-24 rotate-12' src = 'img/code.svg'/>
       <div className='h-[100vh] w-full flex items-center justify-center'>
       <div className='w-full flex items-center justify-center'>
-        <div className='flex gap-16 w-3/5 mt-16'>
+        <div className='flex gap-16 w-3/5'>
           <About />
         </div>
       </div>
