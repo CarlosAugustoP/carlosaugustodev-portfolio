@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import '../app/globals.css';
 import Navbar from '@/components/navbar';
 import { ProjectInfo } from '@/components/projectcontainer';
+import { Toaster } from "@/components/ui/toaster";
+import { useToast } from "@/components/ui/use-toast";
 
 function Projects() {
   const images = [
@@ -10,7 +12,7 @@ function Projects() {
     'https://via.placeholder.com/1920x1080?text=Image+3',
     'https://via.placeholder.com/1920x1080?text=Image+4',
     'img/sample/GymBro/main.png',
-    'https://via.placeholder.com/1920x1080?text=Image+6',
+    'img/sample/PetGram/main.png',
     'https://via.placeholder.com/1920x1080?text=Image+7',
     'https://via.placeholder.com/1920x1080?text=Image+8'
   ];
@@ -71,9 +73,9 @@ function Projects() {
       {
         title: 'PetGram',
         description: 'PetGram is a social media platform for pets! It was built using Django, Python, and standard html and css. I built it to practice my basic developing skills and to have a bit of fun!',
-        image1: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+1',
-        image2: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+2',
-        image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
+        image1: 'img/sample/PetGram/1.png',
+        image2: 'img/sample/PetGram/2.png',
+        image3: 'img/sample/PetGram/3.png',
         githubLink: 'https://github.com',
         deployLink: 'https://deploy.com',
         stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/django.svg', 'img/python.svg', 'img/sqlite.svg']
@@ -104,6 +106,8 @@ function Projects() {
   const [projectIndex, setProjectIndex] = useState(0);
   const [lastScrollTime, setLastScrollTime] = useState(Date.now());
   const [animate, setAnimate] = useState(false);
+  
+  const { toast } = useToast();
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -140,6 +144,14 @@ function Projects() {
       return () => clearTimeout(timer);
     }
   }, [animate]);
+
+  useEffect(() => {
+    // Exibe o toast automaticamente ao carregar a página
+    toast({
+      title: "Role para ver o próximo projeto",
+      description: "Use a rolagem para navegar entre os projetos.",
+    });
+  }, []); // [] significa que isso só será executado uma vez, ao carregar a página
 
   return (
     <div 
@@ -178,6 +190,7 @@ function Projects() {
           stack={projects[projectIndex].stack}
           className={animate ? 'animate-swipe' : ''}
         />
+        <Toaster /> {/* Certifique-se de que o Toaster esteja incluído aqui */}
     </div>
   );
 }
