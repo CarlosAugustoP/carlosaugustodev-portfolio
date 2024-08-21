@@ -6,108 +6,112 @@ import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/components/ui/use-toast";
 
 function Projects() {
-  const images = [
-    'img/sample/PV/main.png',
-    'https://via.placeholder.com/1920x1080?text=Image+2',
-    'https://via.placeholder.com/1920x1080?text=Image+3',
-    'https://via.placeholder.com/1920x1080?text=Image+4',
-    'img/sample/GymBro/main.png',
-    'img/sample/PetGram/main.png',
-    'https://via.placeholder.com/1920x1080?text=Image+7',
-    'https://via.placeholder.com/1920x1080?text=Image+8'
-  ];
-
   const projects = [
     {
       title: 'Construtora P&V',
-      description: 'It was an honor to develop and create the Peixoto and Vasconcelos Constructing company website!',
-      image1: 'https://via.placeholder.com/1920x1080?text=Project+1+Image+1',
-      image2: 'https://via.placeholder.com/1920x1080?text=Project+1+Image+2',
-      image3: 'https://via.placeholder.com/1920x1080?text=Project+1+Image+3',
-      githubLink: 'https://github.com',
+      description: 'In February 2024, it was an honor to develop and create the Peixoto and Vasconcelos Constructing company website!',
+      image1: 'img/sample/PV/1.png',
+      image2: 'img/sample/PV/2.png',
+      image3: 'img/sample/PV/3.png',
+      mainImage: 'img/sample/PV/main.png',
+      githubLink: 'https://github.com/CarlosAugustoP/construtora-next',
       deployLink: 'https://peixotoevasconcelosbr.com.br',
-      stack : ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/react.svg', 'img/next.svg']
+      stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/react.svg', 'img/next.svg']
     },
     {
       title: 'eHospital',
-      description: 'eHospital was a Hospital Management system built for my DB discipline. It utilizes a sleek next, react and tailwind interfaceto comunicate with a Spring-Boot built API, using JDBC template for sql manipulation.',
-      image1: 'https://via.placeholder.com/1920x1080?text=Project+2+Image+1',
-      image2: 'https://via.placeholder.com/1920x1080?text=Project+2+Image+2',
-      image3: 'https://via.placeholder.com/1920x1080?text=Project+2+Image+3',
-      githubLink: 'https://github.com',
-      deployLink: 'https://deploy.com',
-      stack : ['img/css.svg', 'img/js.svg', 'img/react.svg', 'img/next.svg', 'img/mysql.svg', 'img/springboot.svg', 'img/tailwind.svg', 'img/java.svg']
+      description: 'Created in May 2024, eHospital was a Hospital Management system built for my DB discipline. It utilizes a sleek next, react and tailwind interface to communicate with a Spring-Boot built API, using JDBC template for SQL manipulation.',
+      image1: 'img/sample/eHospital/1.jpg',
+      image2: 'img/sample/eHospital/2.jpg',
+      image3: 'img/sample/eHospital/3.jpg',
+      mainImage: 'img/sample/eHospital/main.jpg',
+      githubLink: 'https://github.com/dan-albuquerque/Projeto-Banco-de-dados',
+      stack: ['img/css.svg', 'img/js.svg', 'img/react.svg', 'img/next.svg', 'img/mysql.svg', 'img/springboot.svg', 'img/tailwind.svg', 'img/java.svg']
     },
     {
       title: 'Morfeu',
-      description: 'Built for Banco do Brasil and CESAR org, Morfeu utilized machine learning to generate synthetic data, in a user-friendly manner.',
+      description: 'Developed in july 2024 for Banco do Brasil and CESAR org, Morfeu utilized machine learning to generate synthetic data in a user-friendly manner, complete with a back-end and front-end interface, utilizing React, Flask and multiple AI libraries. The complete app was presented in a pitch to major bank shareholders, who got to see a little bit of what we were up to. To have a look yourself, select the link above the images!',
+      image1: 'img/sample/Morfeu/1.jpg',
+      image2: 'img/sample/Morfeu/2.jpg',
+      image3: 'img/sample/Morfeu/3.jpg',
+      mainImage: 'img/sample/Morfeu/main.jpg',
+      deployLink: 'https://www.youtube.com/watch?v=-ayOFJYTrEI',
+      stack: ['img/react.svg', 'img/python.svg', 'img/tailwind.svg', 'img/tensorflow.svg', 'img/keras.svg', 'img/js.svg', 'img/css.svg'] 
+    },
+    {
+      title: 'this.website',
+      description: 'My Portfolio! Had quite a lot of fun building it, and I hope you enjoy it as much as I did!',
+      image1: 'img/sample/Portfolio/1.png',
+      image2: 'img/sample/Portfolio/2.png',
+      image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
+      mainImage: 'img/sample/Portfolio/main.png',
+      githubLink: 'https://github.com/CarlosAugustoP/carlosaugustodev-portfolio',
+      deployLink: 'https://carlosaugustodev-portfolio.vercel.app/',
+      stack: ['img/react.svg', 'img/next.svg', 'img/tailwind.svg', 'img/js.svg', 'img/css.svg']
+    },
+    {
+      title: 'GymBro',
+      description: 'Built in early 2023, GymBro was my first ever software project, and it was built to help people track their workouts and progress. It was built using Django, Python, AWS and SQLite with unit tests using Selenium.',
+      image1: 'img/sample/GymBro/1.png',
+      image2: 'img/sample/GymBro/2.png',
+      image3: 'img/sample/GymBro/3.png',
+      mainImage: 'img/sample/GymBro/main.png',
+      githubLink: 'https://github.com/dan-albuquerque/fds-gymbro',
+      stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/django.svg', 'img/python.svg', 'img/aws.svg', 'img/sqlite.svg']
+    },
+    {
+      title: 'PetGram',
+      description: 'Built in November 2023, PetGram is a social media platform for pets! It was built using Django, Python, and standard HTML and CSS. I built it to practice my basic developing skills and to have a bit of fun!',
+      image1: 'img/sample/PetGram/1.png',
+      image2: 'img/sample/PetGram/2.png',
+      image3: 'img/sample/PetGram/3.png',
+      mainImage: 'img/sample/PetGram/main.png',
+      githubLink: 'https://github.com/CarlosAugustoP/PetGram',
+      stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/django.svg', 'img/python.svg', 'img/sqlite.svg']
+    },
+    {
+      title: 'Bridge',
+      description: 'Built in November 2923, Bridge is a project built for the discipline of Projects 3 for the client Caçadores de bons exemplos, using HTML, CSS, and Django once again.',
+      image1: 'img/sample/Bridge/1.png',
+      image2: 'img/sample/Bridge/2.png',
+      image3: 'img/sample/Bridge/3.png',
+      mainImage: 'img/sample/Bridge/main.png',
+      githubLink: 'https://github.com/edmaaralencar/bridge-projetos',
+      stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/tailwind.svg', 'img/django.svg', 'img/python.svg', 'img/sqlite.svg']
+    },
+    {
+      title: 'Other Project',
+      description: 'Description 3',
       image1: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+1',
       image2: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+2',
       image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
+      mainImage: 'https://via.placeholder.com/1920x1080?text=Main+Image',
       githubLink: 'https://github.com',
       deployLink: 'https://deploy.com',
-      stack : ['img/react.svg', 'img/python.svg', 'img/tailwind.svg', 'img/tensorflow.svg', 'img/keras.svg', 'img/js.svg', 'img/css.svg'] 
+      stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/react.svg', 'img/next.svg']
     },
-    {
-        title: 'this.website',
-        description: 'My Portfolio! Had quite a lot of fun building it, and I hope you enjoy it as much as I did!',
-        image1: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+1',
-        image2: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+2',
-        image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
-        githubLink: 'https://github.com',
-        deployLink: 'https://deploy.com',
-        stack : ['img/react.svg', 'img/next.svg', 'img/tailwind.svg', 'img/js.svg', 'img/css.svg']
-
-      },
-      {
-        title: 'GymBro',
-        description: 'GymBro was my first ever software project, and it was built to help people track their workouts and progress. It was built using Django, Python, AWS and SQLite with unit tests using Selenium.',
-        image1: 'img/sample/GymBro/1.png',
-        image2: 'img/sample/GymBro/2.png',
-        image3: 'img/sample/GymBro/3.png',
-        githubLink: 'https://github.com',
-        deployLink: 'https://deploy.com',
-        stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/django.svg', 'img/python.svg', 'img/aws.svg', 'img/sqlite.svg']
-
-      },
-      {
-        title: 'PetGram',
-        description: 'PetGram is a social media platform for pets! It was built using Django, Python, and standard html and css. I built it to practice my basic developing skills and to have a bit of fun!',
-        image1: 'img/sample/PetGram/1.png',
-        image2: 'img/sample/PetGram/2.png',
-        image3: 'img/sample/PetGram/3.png',
-        githubLink: 'https://github.com',
-        deployLink: 'https://deploy.com',
-        stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/django.svg', 'img/python.svg', 'img/sqlite.svg']
-
-      },
-      {
-        title: 'Bridge',
-        description: 'Bridge is a project built for the discipline of Projects 3 for the client Caçadores de bons exemplos, using html, css and Django once again.',
-        image1: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+1',
-        image2: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+2',
-        image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
-        githubLink: 'https://github.com',
-        deployLink: 'https://deploy.com',
-        stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/tailwind.svg','img/django.svg', 'img/python.svg', 'img/sqlite.svg']
-      },
-      {
-        title: 'Other Project',
-        description: 'Description 3',
-        image1: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+1',
-        image2: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+2',
-        image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
-        githubLink: 'https://github.com',
-        deployLink: 'https://deploy.com'
-      },
   ];
+  
 
-  const [imageIndex, setImageIndex] = useState(0);
+  const [backgroundImage, setBackgroundImage] = useState(projects[0].mainImage);
   const [projectIndex, setProjectIndex] = useState(0);
   const [lastScrollTime, setLastScrollTime] = useState(Date.now());
   const [animate, setAnimate] = useState(false);
   
   const { toast } = useToast();
+
+  const handleImageHover = (image) => {
+    setBackgroundImage(image);
+  };
+
+  const handleImageMouseLeave = () => {
+    setBackgroundImage(projects[projectIndex].mainImage);
+  };
+
+  const handleProjectChange = (newIndex) => {
+    setProjectIndex(newIndex);
+    setBackgroundImage(projects[newIndex].mainImage);
+  };
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -118,13 +122,11 @@ function Projects() {
         return; // Adiciona um intervalo mínimo entre as transições
       }
 
-      if (event.deltaY > 0 && imageIndex < images.length - 1) {
-        setImageIndex((prevIndex) => prevIndex + 1);
-        setProjectIndex((prevIndex) => prevIndex + 1);
+      if (event.deltaY > 0 && projectIndex < projects.length - 1) {
+        handleProjectChange(projectIndex + 1);
         setAnimate(true);
-      } else if (event.deltaY < 0 && imageIndex > 0) {
-        setImageIndex((prevIndex) => prevIndex - 1);
-        setProjectIndex((prevIndex) => prevIndex - 1);
+      } else if (event.deltaY < 0 && projectIndex > 0) {
+        handleProjectChange(projectIndex - 1);
         setAnimate(true);
       }
 
@@ -136,7 +138,7 @@ function Projects() {
     return () => {
       window.removeEventListener('wheel', handleScroll);
     };
-  }, [imageIndex, images.length, lastScrollTime]);
+  }, [projectIndex, projects.length, lastScrollTime]);
 
   useEffect(() => {
     if (animate) {
@@ -148,8 +150,8 @@ function Projects() {
   useEffect(() => {
     // Exibe o toast automaticamente ao carregar a página
     toast({
-      title: "Role para ver o próximo projeto",
-      description: "Use a rolagem para navegar entre os projetos.",
+      title: "Welcome to my Projects page! 🚀",
+      description: "Scroll down to see the next project, and select the images to see them in full size!",
     });
   }, []); // [] significa que isso só será executado uma vez, ao carregar a página
 
@@ -171,7 +173,7 @@ function Projects() {
           style={{
             width: '100%',
             height: '100%',
-            backgroundImage: `url(${images[imageIndex]})`,
+            backgroundImage: `url(${backgroundImage})`,
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
@@ -189,6 +191,8 @@ function Projects() {
           deployLink={projects[projectIndex].deployLink}
           stack={projects[projectIndex].stack}
           className={animate ? 'animate-swipe' : ''}
+          onImageHover={handleImageHover}  // Pass the hover handler to ProjectInfo
+          onImageMouseLeave={handleImageMouseLeave}  // Pass the mouse leave handler to ProjectInfo
         />
         <Toaster /> {/* Certifique-se de que o Toaster esteja incluído aqui */}
     </div>
