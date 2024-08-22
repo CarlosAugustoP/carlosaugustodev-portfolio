@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../app/globals.css";
+import { useEffect, useState } from "react";
 
 export const ImageContainer = (props) => {
     return (
@@ -10,33 +11,13 @@ export const ImageContainer = (props) => {
 }
 
 export function About() {
-    const [text, setText] = useState('');
-    const [showImg, setShowImg] = useState(false);
-
-    useEffect(() => {
-        setTimeout(() => {
-            setText("I waited 2 seconds to be loaded!");
-            setShowImg(true);
-        }, 2000);
-    }, []);
-
     return (
         <div className="flex gap-10">
-            <div className="text-left w-1/2 flex flex-col justify-between">
+            <div className="text-left w-1/2 flex flex-col justify-between ">
                 <h1 className="text-[6.6vw] font-bold leading-none text-white">Hello World!</h1>
-                <p className="text-[1.55vw] text-white">My name is Carlos, and I'm a Computer Science student and FullStack Dev from Recife, Brazil, currently expanding my skills in React Native, Next.js and generative A.I! See some of my projects, learn more about me or get in contact!</p>
-                <p className="text-[1.55vw] text-gray-400">{text}</p>
+                <p className="text-[1.55vw] text-white">My name is Carlos, and I'm a Computer Science student and FullStack Dev from Recife, Brazil, currently expanding my skills in React Native, Next.js and generative A.I! See some of my projects, learn more about me or get in contact! </p>
             </div>
-            <div className="w-1/2 relative">
-                {showImg ? (
-                    <img src='/img/picture.jpeg' alt='Carlos Augusto' className='w-full h-auto rounded-lg border-white border-4' />
-                ) : (
-                    <div className="absolute inset-0 flex items-center justify-center bg-gray-300 rounded-lg border-white border-4">
-                        {/* This is a spinner or skeleton placeholder */}
-                        <div className="w-16 h-16 border-4 border-t-4 border-t-transparent border-white rounded-full animate-spin"></div>
-                    </div>
-                )}
-            </div>
+            <img src='img/picture.jpeg' className = 'w-1/2 rounded-lg  border-white border-4'alt='Carlos Augusto' quality = {75} />
         </div>
     );
 }
