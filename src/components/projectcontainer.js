@@ -34,7 +34,7 @@ export const ProjectInfo = ({ title, description, image1, image2, image3, github
                 </div>
             </div>
             <div className="flex items-center justify-between w-full">
-                <p className="text-white text-[1.vw] w-2/5">{description}</p>
+                <p className="text-white text-[1.vw] w-1/2">{description}</p>
                 <div className="flex gap-4">
                     <img 
                         src={image1} 
@@ -59,7 +59,7 @@ export const ProjectInfo = ({ title, description, image1, image2, image3, github
                     />
                 </div>
             </div>
-            <hr className="border-white w-2/5" />
+            <hr className="border-white w-1/2" />
             <div className="flex items-center gap-4 mt-2">
                 <div className="flex gap-4">
                     {stack.map((image, index) => (
