@@ -17,7 +17,7 @@ export const ProjectInfo = ({ title, description, image1, image2, image3, github
         <div className={`flex flex-col gap-3 bg-black px-10 w-full py-5 ${className}`}>
             <div className="flex items-center justify-between">
                 <div className="flex flex-col text-left">
-                    <h1 className="text-[2vw] font-bold text-white">{title}</h1>
+                    <h1 className="text-[1.8vw] font-bold text-white">{title}</h1>
                     <p className="text-white font-light italic">{info}</p>
                 </div>
                 <div className="flex items-center gap-4">

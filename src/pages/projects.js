@@ -30,7 +30,7 @@ function Projects() {
     },
     {
       title: 'Morfeu',
-      description: 'Developed in july 2024 for Banco do Brasil and CESAR org, Morfeu utilized machine learning to generate synthetic data in a user-friendly manner, complete with a back-end and front-end interface, utilizing React, Flask and multiple AI libraries. The complete app was presented in a pitch to major bank shareholders, who got to see a little bit of what we were up to. To have a look yourself, select the link above the images!',
+      description: 'Developed in july 2024 for Banco do Brasil and CESAR, Morfeu uses machine learning to generate synthetic data in a user-friendly manner, utilizing React, Flask and multiple AI libraries. The complete app was presented in a pitch to major bank shareholders.',
       image1: 'img/sample/Morfeu/1.jpg',
       image2: 'img/sample/Morfeu/2.jpg',
       image3: 'img/sample/Morfeu/3.jpg',
@@ -51,7 +51,7 @@ function Projects() {
     },
     {
       title: 'GymBro',
-      description: 'Built in early 2023, GymBro was my first ever software project, and it was built to help people track their workouts and progress. It was built using Django, Python, AWS and SQLite with unit tests using Selenium.',
+      description: 'Built in early 2023, GymBro was my first ever software project, and it was built to help people track their workouts and progress. It was built using Django, Python, AWS and SQLite with tests using Selenium.',
       image1: 'img/sample/GymBro/1.png',
       image2: 'img/sample/GymBro/2.png',
       image3: 'img/sample/GymBro/3.png',
@@ -71,7 +71,7 @@ function Projects() {
     },
     {
       title: 'Bridge',
-      description: 'Built in November 2923, Bridge is a project built for the discipline of Projects 3 for the client Caçadores de bons exemplos, using HTML, CSS, and Django once again.',
+      description: 'Built in November 2023, Bridge is a project built for the discipline of Projects 3 for the client Caçadores de bons exemplos, using HTML, CSS, and Django once again.',
       image1: 'img/sample/Bridge/1.png',
       image2: 'img/sample/Bridge/2.png',
       image3: 'img/sample/Bridge/3.png',

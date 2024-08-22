@@ -8,8 +8,8 @@ export default function home() {
   return (
     <div className='bg-gradient-to-b from-black to-blue-400 flex flex-col items-center justify-center gap-40'>
       <Navbar />
-      <img className  = 'absolute h-64 right-0 bottom-24 rotate-12' src = 'img/neural.svg'/>
-      <img className  = 'absolute h-64 left-0 top-24 rotate-12' src = 'img/code.svg'/>
+      <img className  = 'absolute h-56 right-0 bottom-24 rotate-12' src = 'img/neural.svg'/>
+      <img className  = 'absolute h-56 left-0 top-24 rotate-12' src = 'img/code.svg'/>
       <div className='h-[100vh] w-full flex items-center justify-center'>
       <div className='w-full flex items-center justify-center'>
         <div className='flex gap-16 w-3/5'>
