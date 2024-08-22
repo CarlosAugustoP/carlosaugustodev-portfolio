@@ -1,13 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: ["class"], // Enable dark mode based on a specific class
   content: [
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
     './app/**/*.{js,jsx}',
     './src/**/*.{js,jsx}',
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -17,6 +16,10 @@ module.exports = {
       },
     },
     extend: {
+      fontSize: {
+        "10xl": "4rem",
+        "5xl": "3rem",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -33,5 +36,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-}
+  plugins: [
+    require("tailwindcss-animate"), // Ensure the animate plugin is installed
+  ],
+};
