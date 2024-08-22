@@ -4,8 +4,10 @@ import Navbar from '@/components/navbar';
 import { ProjectInfo } from '@/components/projectcontainer';
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/components/ui/use-toast";
+import MobilePC from '@/components/mobileprojcont';
 
 function Projects() {
+  
   const projects = [
     {
       title: 'Construtora P&V',
@@ -71,7 +73,7 @@ function Projects() {
     },
     {
       title: 'Bridge',
-      description: 'Built in November 2023, Bridge is a project built for the discipline of Projects 3 for the client Caçadores de bons exemplos, using HTML, CSS, and Django once again.',
+      description: 'Built in  built for the discipline of Projects 3 for the client Caçadores de bons exemplos, using HTML, CSS, and Django once again.',
       image1: 'img/sample/Bridge/1.png',
       image2: 'img/sample/Bridge/2.png',
       image3: 'img/sample/Bridge/3.png',
@@ -97,7 +99,22 @@ function Projects() {
   const [projectIndex, setProjectIndex] = useState(0);
   const [lastScrollTime, setLastScrollTime] = useState(Date.now());
   const [animate, setAnimate] = useState(false);
-  
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+
+    window.addEventListener('resize', checkMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
+
   const { toast } = useToast();
 
   const handleImageHover = (image) => {
@@ -114,31 +131,33 @@ function Projects() {
   };
 
   useEffect(() => {
-    const handleScroll = (event) => {
-      event.preventDefault(); // Impede o comportamento padrão de rolagem
+    if (!isMobile) {
+      const handleScroll = (event) => {
+        event.preventDefault();
 
-      const currentScrollTime = Date.now();
-      if (currentScrollTime - lastScrollTime < 500) {
-        return; // Adiciona um intervalo mínimo entre as transições
-      }
+        const currentScrollTime = Date.now();
+        if (currentScrollTime - lastScrollTime < 500) {
+          return; // Add a minimum interval between transitions
+        }
 
-      if (event.deltaY > 0 && projectIndex < projects.length - 1) {
-        handleProjectChange(projectIndex + 1);
-        setAnimate(true);
-      } else if (event.deltaY < 0 && projectIndex > 0) {
-        handleProjectChange(projectIndex - 1);
-        setAnimate(true);
-      }
+        if (event.deltaY > 0 && projectIndex < projects.length - 1) {
+          handleProjectChange(projectIndex + 1);
+          setAnimate(true);
+        } else if (event.deltaY < 0 && projectIndex > 0) {
+          handleProjectChange(projectIndex - 1);
+          setAnimate(true);
+        }
 
-      setLastScrollTime(currentScrollTime);
-    };
+        setLastScrollTime(currentScrollTime);
+      };
 
-    window.addEventListener('wheel', handleScroll, { passive: false });
+      window.addEventListener('wheel', handleScroll, { passive: false });
 
-    return () => {
-      window.removeEventListener('wheel', handleScroll);
-    };
-  }, [projectIndex, projects.length, lastScrollTime]);
+      return () => {
+        window.removeEventListener('wheel', handleScroll);
+      };
+    }
+  }, [projectIndex, projects.length, lastScrollTime, isMobile]);
 
   useEffect(() => {
     if (animate) {
@@ -148,55 +167,76 @@ function Projects() {
   }, [animate]);
 
   useEffect(() => {
-    // Exibe o toast automaticamente ao carregar a página
     toast({
       title: "Welcome to my Projects page! 🚀",
       description: "Scroll down to see the next project, and select the images to see them in full size!",
     });
-  }, []); // [] significa que isso só será executado uma vez, ao carregar a página
+  }, []);
 
   return (
-    <div 
-      style={{ 
-        height: '100vh', 
-        width: '100%',
-        position: 'relative',
-        overflow: 'hidden',
-        display:'flex',
-        flexDirection:'column',
-        alignItems:'center',
-        justifyContent:'center'
-      }}
-    >
+    <>
+      {isMobile ? (
+        <div className='bg-gradient-to-b from-black to-blue-400 flex flex-col items-center justify-center gap-40'>
         <Navbar />
-        <div
-          style={{
+        {projects.map((project, index) => (
+          <MobilePC
+            key={index}
+            mainImg={project.mainImage}
+            title={project.title}
+            description={project.description}
+            image1={project.image1}
+            image2={project.image2}
+            image3={project.image3}
+            githubLink={project.githubLink}
+            deployLink={project.deployLink}
+            stack={project.stack}
+          />
+        ))}
+      </div>
+      ) : (
+        <div 
+          style={{ 
+            height: '100vh', 
             width: '100%',
-            height: '100%',
-            backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            transition: 'background-image 0.5s ease-in-out',
-            backgroundColor: 'black',
+            position: 'relative',
+            overflow: 'hidden',
+            display:'flex',
+            flexDirection:'column',
+            alignItems:'center',
+            justifyContent:'center'
           }}
-        />
-        <ProjectInfo 
-          title={projects[projectIndex].title}
-          description={projects[projectIndex].description}
-          image1={projects[projectIndex].image1}
-          image2={projects[projectIndex].image2}
-          image3={projects[projectIndex].image3}
-          githubLink={projects[projectIndex].githubLink}
-          deployLink={projects[projectIndex].deployLink}
-          stack={projects[projectIndex].stack}
-          className={animate ? 'animate-swipe' : ''}
-          onImageHover={handleImageHover}  // Pass the hover handler to ProjectInfo
-          onImageMouseLeave={handleImageMouseLeave}  // Pass the mouse leave handler to ProjectInfo
-        />
-        <Toaster /> {/* Certifique-se de que o Toaster esteja incluído aqui */}
-    </div>
+        >
+          <Navbar />
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              backgroundImage: `url(${backgroundImage})`,
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              transition: 'background-image 0.5s ease-in-out',
+              backgroundColor: 'black',
+            }}
+          />
+          <ProjectInfo 
+            title={projects[projectIndex].title}
+            description={projects[projectIndex].description}
+            image1={projects[projectIndex].image1}
+            image2={projects[projectIndex].image2}
+            image3={projects[projectIndex].image3}
+            githubLink={projects[projectIndex].githubLink}
+            deployLink={projects[projectIndex].deployLink}
+            stack={projects[projectIndex].stack}
+            className={animate ? 'animate-swipe' : ''}
+            onImageHover={handleImageHover}  
+            onImageMouseLeave={handleImageMouseLeave}  
+          />
+          <Toaster />
+        </div>
+      )}
+    </>
   );
-}
 
-export default Projects;
+}
+  export default Projects;
