@@ -25,6 +25,7 @@ export default function Navbar({ className }) {  // Destructure className from p
             <div className='flex space-x-4 bg-black p-5 rounded-lg'>
             <a href='#' onClick={() => handleNavigation('/')}>Home</a>
             <a href='#' onClick={() => handleNavigation('/', 'About')}>About</a>
+            <a href='#' onClick={() => handleNavigation('/','Contact')}>Contact</a>
             <a href='#' onClick={() => handleNavigation('/projects')}>Projects</a>
             </div>
         </div>
