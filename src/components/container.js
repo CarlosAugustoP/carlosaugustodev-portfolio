@@ -24,7 +24,7 @@ export default function AboutContainer({ header, text, img, direction}) {
             <div className="flex flex-col gap-5">
                 <h1 className="text-10xl font-bold leading-none text-white">{header}</h1>
                 <p className="text-white">{text}</p>
-                <img src={img} className="rounded-lg border-white border-4" alt="Carlos Augusto" />
+                <img src={img} className="rounded-lg border-white border-4 " alt="Carlos Augusto" />
             </div>
         );
     }
