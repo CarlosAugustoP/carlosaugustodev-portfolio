@@ -5,7 +5,7 @@ export default function AboutContainer({ header, text, img, direction}) {
     const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
         const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768);
+            setIsMobile(window.innerWidth < 1024);
         };
 
         // Initial check
