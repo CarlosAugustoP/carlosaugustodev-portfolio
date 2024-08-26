@@ -27,7 +27,7 @@ export default function home() {
 
   return (
     <div className='bg-gradient-to-b from-black to-blue-400 flex flex-col items-center justify-center gap-40'>
-      <Navbar />
+      <Navbar className={'absolute'}/>
       <img className  = {isMobile ?  'hidden' : 'absolute h-56 right-0 bottom-24 rotate-12'} src = 'img/neural.svg'/>
       <img className  = {isMobile ?  'hidden' : 'absolute h-56 left-0 top-24 rotate-12'} src = 'img/code.svg'/>
       <div className= 'h-[100vh] w-full flex items-center justify-center'>

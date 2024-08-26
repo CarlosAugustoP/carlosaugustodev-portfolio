@@ -81,17 +81,6 @@ function Projects() {
       githubLink: 'https://github.com/edmaaralencar/bridge-projetos',
       stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/tailwind.svg', 'img/django.svg', 'img/python.svg', 'img/sqlite.svg']
     },
-    {
-      title: 'Other Project',
-      description: 'Description 3',
-      image1: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+1',
-      image2: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+2',
-      image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
-      mainImage: 'https://via.placeholder.com/1920x1080?text=Main+Image',
-      githubLink: 'https://github.com',
-      deployLink: 'https://deploy.com',
-      stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/react.svg', 'img/next.svg']
-    },
   ];
   
 
@@ -177,7 +166,8 @@ function Projects() {
     <>
       {isMobile ? (
         <div className='bg-gradient-to-b from-black to-blue-400 flex flex-col items-center justify-center gap-30'>
-        <Navbar  />
+        <Navbar className='static' />
+
         {projects.map((project, index) => (
           <MobilePC
             key={index}
@@ -203,10 +193,11 @@ function Projects() {
             display:'flex',
             flexDirection:'column',
             alignItems:'center',
-            justifyContent:'center'
+            justifyContent:'center',
+            
           }}
         >
-          <Navbar />
+          <Navbar className={'absolute'} />
           <div
             style={{
               width: '100%',

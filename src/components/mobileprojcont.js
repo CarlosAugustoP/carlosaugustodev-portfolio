@@ -10,7 +10,7 @@ import {
 
 export default function MobilePC({ mainImg, title, description, image1, image2, image3, githubLink, deployLink, stack = [], className }) {
     return (
-        <div className="w-3/4 flex flex-col gap-3">
+        <div className="w-3/4 flex flex-col gap-3 mb-10 ">
             <div className="mt-16 flex items-center justify-between">
                 <h1 className="text-white text-2xl font-bold">{title}</h1>
                 <div className="flex items-center gap-2">
