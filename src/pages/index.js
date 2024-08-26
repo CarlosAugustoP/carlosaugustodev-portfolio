@@ -42,7 +42,7 @@ export default function home() {
           <AboutContainer header='CESAR school' text='I study Computer Science at CESAR School, which prioritizes innovation and teamwork and directly integrates us with Porto Digital, one of the biggest digital centers in South America. I am currently in my 5th semester!' img='img/cesar.png' direction='flex-row-reverse' />
         </div>
       </div>
-      <div className='w-full flex items-center justify-center mb-40'>
+      <div className='w-full flex items-center justify-center'>
         <div className={isMobile ? 'flex gap-16 w-4/5' : 'flex gap-16 w-3/5'}>
           <AboutContainer header='About Me (:' text="Ever since i was little, i've been in love with computers. Whether it's the internet, games, hardware or software, working with Computer Science is a dream come true! In my free time, i love playing games, drawing, hitting the gym and travelling!" img='img/viagem.jpeg' />
         </div>
