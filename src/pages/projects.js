@@ -176,8 +176,8 @@ function Projects() {
   return (
     <>
       {isMobile ? (
-        <div className='bg-gradient-to-b from-black to-blue-400 flex flex-col items-center justify-center gap-40'>
-        <Navbar />
+        <div className='bg-gradient-to-b from-black to-blue-400 flex flex-col items-center justify-center gap-30'>
+        <Navbar  />
         {projects.map((project, index) => (
           <MobilePC
             key={index}
