@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from 'next/image';
 import "../app/globals.css";
 
 export const ProjectInfo = ({ title, description, image1, image2, image3, githubLink, deployLink, stack = [], className, onImageHover, onImageMouseLeave, info }) => {
@@ -23,12 +24,26 @@ export const ProjectInfo = ({ title, description, image1, image2, image3, github
                 <div className="flex items-center gap-4">
                     {githubLink && (
                         <a href={githubLink} className="text-white">
-                            <img src='img/github.svg' className="h-10 w-10" alt="GitHub Link" />
+                            <Image 
+                                src='/img/github.svg' 
+                                alt="GitHub Link" 
+                                width={40} 
+                                height={40} 
+                                quality={50}
+                                loading="lazy"
+                            />
                         </a>
                     )}
                     {deployLink && (
                         <a href={deployLink} className="text-white">
-                            <img src='img/deploy.svg' className="h-10 w-10" alt="Deploy Link" />
+                            <Image 
+                                src='/img/deploy.svg' 
+                                alt="Deploy Link" 
+                                width={40} 
+                                height={40} 
+                                quality={50}
+                                loading="lazy"
+                            />
                         </a>
                     )}
                 </div>
@@ -36,36 +51,55 @@ export const ProjectInfo = ({ title, description, image1, image2, image3, github
             <div className="flex items-center justify-between w-full">
                 <p className="text-white text-[1.vw] w-1/2">{description}</p>
                 <div className="flex gap-4">
-                    <img 
+                    <Image 
                         src={image1} 
-                        alt="Project Image" 
-                        className="w-24 h-24 rounded-lg object-cover cursor-pointer" 
+                        alt="Project Image 1" 
+                        width={96} 
+                        height={96} 
+                        className="rounded-lg object-cover cursor-pointer h-20" 
                         onMouseEnter={() => onImageHover(image1)}
-                        onMouseLeave={onImageMouseLeave} 
+                        onMouseLeave={onImageMouseLeave}
+                        quality={50}
+                        loading="lazy"
                     />
-                    <img 
+                    <Image 
                         src={image2} 
-                        alt="Project Image" 
-                        className="w-24 h-24 rounded-lg object-cover cursor-pointer" 
+                        alt="Project Image 2" 
+                        width={96} 
+                        height={96} 
+                        className="rounded-lg object-cover cursor-pointer h-20" 
                         onMouseEnter={() => onImageHover(image2)}
-                        onMouseLeave={onImageMouseLeave} 
+                        onMouseLeave={onImageMouseLeave}
+                        quality={50}
+                        loading="lazy"
                     />
-                    <img 
+                    <Image 
                         src={image3} 
-                        alt="Project Image" 
-                        className="w-24 h-24 rounded-lg object-cover cursor-pointer" 
+                        alt="Project Image 3" 
+                        width={96} 
+                        height={96} 
+                        className="rounded-lg object-cover cursor-pointer h-20" 
                         onMouseEnter={() => onImageHover(image3)}
-                        onMouseLeave={onImageMouseLeave} 
+                        onMouseLeave={onImageMouseLeave}
+                        quality={50}
+                        loading="lazy"
                     />
                 </div>
-
-                
             </div>
             <hr className="border-white w-1/2" />
             <div className="flex items-center gap-4 mt-2">
                 <div className="flex gap-4">
                     {stack.map((image, index) => (
-                        <img key={index} src={image} alt={`Stack Image ${index + 1}`} className="w-6 h-6 rounded-lg" />
+                        <Image 
+                            key={index} 
+                            src={image} 
+                            alt={`Stack Image ${index + 1}`} 
+                            width={24} 
+                            height={24} 
+                            className="rounded-lg" 
+                            quality={50} 
+                            loading="lazy"
+                        />
                     ))}
                 </div>
             </div>

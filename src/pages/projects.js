@@ -12,74 +12,74 @@ function Projects() {
     {
       title: 'Construtora P&V',
       description: 'In February 2024, it was an honor to develop and create the Peixoto and Vasconcelos Constructing company website!',
-      image1: 'img/sample/PV/1.png',
-      image2: 'img/sample/PV/2.png',
-      image3: 'img/sample/PV/3.png',
-      mainImage: 'img/sample/PV/main.png',
+      image1: '/img/sample/PV/1.png',
+      image2: '/img/sample/PV/2.png',
+      image3: '/img/sample/PV/3.png',
+      mainImage: '/img/sample/PV/main.png',
       githubLink: 'https://github.com/CarlosAugustoP/construtora-next',
       deployLink: 'https://peixotoevasconcelosbr.com.br',
-      stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/react.svg', 'img/next.svg']
+      stack: ['/img/html.svg', '/img/css.svg', '/img/js.svg', '/img/react.svg', '/img/next.svg']
     },
     {
       title: 'eHospital',
       description: 'Created in May 2024, eHospital was a Hospital Management system built for my DB discipline. It utilizes a sleek next, react and tailwind interface to communicate with a Spring-Boot built API, using JDBC template for SQL manipulation.',
-      image1: 'img/sample/eHospital/1.jpg',
-      image2: 'img/sample/eHospital/2.jpg',
-      image3: 'img/sample/eHospital/3.jpg',
-      mainImage: 'img/sample/eHospital/main.jpg',
+      image1: '/img/sample/eHospital/1.jpg',
+      image2: '/img/sample/eHospital/2.jpg',
+      image3: '/img/sample/eHospital/3.jpg',
+      mainImage: '/img/sample/eHospital/main.jpg',
       githubLink: 'https://github.com/dan-albuquerque/Projeto-Banco-de-dados',
-      stack: ['img/css.svg', 'img/js.svg', 'img/react.svg', 'img/next.svg', 'img/mysql.svg', 'img/springboot.svg', 'img/tailwind.svg', 'img/java.svg']
+      stack: ['/img/css.svg', '/img/js.svg', '/img/react.svg', '/img/next.svg', '/img/mysql.svg', '/img/springboot.svg', '/img/tailwind.svg', '/img/java.svg']
     },
     {
       title: 'Morfeu',
       description: 'Developed in july 2024 for Banco do Brasil and CESAR, Morfeu uses machine learning to generate synthetic data in a user-friendly manner, utilizing React, Flask and multiple AI libraries. The complete app was presented in a pitch to major bank shareholders.',
-      image1: 'img/sample/Morfeu/1.jpg',
-      image2: 'img/sample/Morfeu/2.jpg',
-      image3: 'img/sample/Morfeu/3.jpg',
-      mainImage: 'img/sample/Morfeu/main.jpg',
+      image1: '/img/sample/Morfeu/1.jpg',
+      image2: '/img/sample/Morfeu/2.jpg',
+      image3: '/img/sample/Morfeu/3.jpg',
+      mainImage: '/img/sample/Morfeu/main.jpg',
       deployLink: 'https://www.youtube.com/watch?v=-ayOFJYTrEI',
-      stack: ['img/react.svg', 'img/python.svg', 'img/tailwind.svg', 'img/tensorflow.svg', 'img/keras.svg', 'img/js.svg', 'img/css.svg'] 
+      stack: ['/img/react.svg', '/img/python.svg', '/img/tailwind.svg', '/img/tensorflow.svg', '/img/keras.svg', '/img/js.svg', '/img/css.svg'] 
     },
     {
       title: 'this.website',
       description: 'My Portfolio! Had quite a lot of fun building it, and I hope you enjoy it as much as I did!',
-      image1: 'img/sample/Portfolio/1.png',
-      image2: 'img/sample/Portfolio/2.png',
-      image3: 'https://via.placeholder.com/1920x1080?text=Project+3+Image+3',
-      mainImage: 'img/sample/Portfolio/main.png',
+      image1: '/img/sample/Portfolio/1.png',
+      image2: '/img/sample/Portfolio/2.png',
+      image3: '/img/sample/Portfolio/1.png',
+      mainImage: '/img/sample/Portfolio/main.png',
       githubLink: 'https://github.com/CarlosAugustoP/carlosaugustodev-portfolio',
       deployLink: 'https://carlosaugustodev-portfolio.vercel.app/',
-      stack: ['img/react.svg', 'img/next.svg', 'img/tailwind.svg', 'img/js.svg', 'img/css.svg']
+      stack: ['/img/react.svg', '/img/next.svg', '/img/tailwind.svg', '/img/js.svg', '/img/css.svg']
     },
     {
       title: 'GymBro',
       description: 'Built in early 2023, GymBro was my first ever software project, and it was built to help people track their workouts and progress. It was built using Django, Python, AWS and SQLite with tests using Selenium.',
-      image1: 'img/sample/GymBro/1.png',
-      image2: 'img/sample/GymBro/2.png',
-      image3: 'img/sample/GymBro/3.png',
-      mainImage: 'img/sample/GymBro/main.png',
+      image1: '/img/sample/GymBro/1.png',
+      image2: '/img/sample/GymBro/2.png',
+      image3: '/img/sample/GymBro/3.png',
+      mainImage: '/img/sample/GymBro/main.png',
       githubLink: 'https://github.com/dan-albuquerque/fds-gymbro',
-      stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/django.svg', 'img/python.svg', 'img/aws.svg', 'img/sqlite.svg']
+      stack: ['/img/html.svg', '/img/css.svg', '/img/js.svg', '/img/django.svg', '/img/python.svg', '/img/aws.svg', '/img/sqlite.svg']
     },
     {
       title: 'PetGram',
       description: 'Built in November 2023, PetGram is a social media platform for pets! It was built using Django, Python, and standard HTML and CSS. I built it to practice my basic developing skills and to have a bit of fun!',
-      image1: 'img/sample/PetGram/1.png',
-      image2: 'img/sample/PetGram/2.png',
-      image3: 'img/sample/PetGram/3.png',
-      mainImage: 'img/sample/PetGram/main.png',
+      image1: '/img/sample/PetGram/1.png',
+      image2: '/img/sample/PetGram/2.png',
+      image3: '/img/sample/PetGram/3.png',
+      mainImage: '/img/sample/PetGram/main.png',
       githubLink: 'https://github.com/CarlosAugustoP/PetGram',
-      stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/django.svg', 'img/python.svg', 'img/sqlite.svg']
+      stack: ['/img/html.svg', '/img/css.svg', '/img/js.svg', '/img/django.svg', '/img/python.svg', '/img/sqlite.svg']
     },
     {
       title: 'Bridge',
       description: 'Built in  built for the discipline of Projects 3 for the client Caçadores de bons exemplos, using HTML, CSS, and Django once again.',
-      image1: 'img/sample/Bridge/1.png',
-      image2: 'img/sample/Bridge/2.png',
-      image3: 'img/sample/Bridge/3.png',
-      mainImage: 'img/sample/Bridge/main.png',
+      image1: '/img/sample/Bridge/1.png',
+      image2: '/img/sample/Bridge/2.png',
+      image3: '/img/sample/Bridge/3.png',
+      mainImage: '/img/sample/Bridge/main.png',
       githubLink: 'https://github.com/edmaaralencar/bridge-projetos',
-      stack: ['img/html.svg', 'img/css.svg', 'img/js.svg', 'img/tailwind.svg', 'img/django.svg', 'img/python.svg', 'img/sqlite.svg']
+      stack: ['/img/html.svg', '/img/css.svg', '/img/js.svg', '/img/tailwind.svg', '/img/django.svg', '/img/python.svg', '/img/sqlite.svg']
     },
   ];
   
