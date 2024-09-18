@@ -15,7 +15,7 @@ export const ProjectInfo = ({ title, description, image1, image2, image3, github
     }, [title, description, image1, image2, image3, githubLink, deployLink, stack]);
 
     return (
-        <div className={`flex flex-col gap-3 bg-black px-10 w-full py-5 ${className}`}>
+        <div className={`flex flex-col gap-3 bg-black px-10 w-full py-5 border-2 border-white${className}`}>
             <div className="flex items-center justify-between">
                 <div className="flex flex-col text-left">
                     <h1 className="text-[1.8vw] font-bold text-white">{title}</h1>
@@ -56,10 +56,9 @@ export const ProjectInfo = ({ title, description, image1, image2, image3, github
                         alt="Project Image 1" 
                         width={96} 
                         height={96} 
-                        className="rounded-lg object-cover cursor-pointer h-20" 
+                        className="rounded-lg object-cover cursor-pointer h-20 border-2 border-white" 
                         onMouseEnter={() => onImageHover(image1)}
                         onMouseLeave={onImageMouseLeave}
-                        quality={50}
                         loading="lazy"
                     />
                     <Image 
@@ -67,10 +66,9 @@ export const ProjectInfo = ({ title, description, image1, image2, image3, github
                         alt="Project Image 2" 
                         width={96} 
                         height={96} 
-                        className="rounded-lg object-cover cursor-pointer h-20" 
+                        className="rounded-lg object-cover cursor-pointer h-20 border-2 border-white" 
                         onMouseEnter={() => onImageHover(image2)}
                         onMouseLeave={onImageMouseLeave}
-                        quality={50}
                         loading="lazy"
                     />
                     <Image 
@@ -78,10 +76,9 @@ export const ProjectInfo = ({ title, description, image1, image2, image3, github
                         alt="Project Image 3" 
                         width={96} 
                         height={96} 
-                        className="rounded-lg object-cover cursor-pointer h-20" 
+                        className="rounded-lg object-cover cursor-pointer h-20 border-2 border-white" 
                         onMouseEnter={() => onImageHover(image3)}
                         onMouseLeave={onImageMouseLeave}
-                        quality={50}
                         loading="lazy"
                     />
                 </div>
