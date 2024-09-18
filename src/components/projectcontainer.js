@@ -58,6 +58,8 @@ export const ProjectInfo = ({ title, description, image1, image2, image3, github
                         onMouseLeave={onImageMouseLeave} 
                     />
                 </div>
+
+                
             </div>
             <hr className="border-white w-1/2" />
             <div className="flex items-center gap-4 mt-2">
