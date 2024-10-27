@@ -15,7 +15,7 @@ function Projects() {
       image1: '/img/sample/Hidet/1.png',
       image2: '/img/sample/Hidet/2.png',
       image3: '/img/sample/Hidet/3.png',
-      mainImage: '/img/sample/HIDET/main.png',
+      mainImage: '/img/sample/Hidet/main.png',
       githubLink: 'https://github.com/CarlosAugustoP/hidet-productions',
       deployLink: 'https://hidet-productions.vercel.app/',
       stack: ['/img/firebase.svg', '/img/css.svg', '/img/ts.svg', '/img/react.svg', '/img/next.svg', '/img/postgresql.svg']
