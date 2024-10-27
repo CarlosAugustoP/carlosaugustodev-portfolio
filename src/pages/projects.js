@@ -10,6 +10,16 @@ function Projects() {
   
   const projects = [
     {
+      title: 'HIDET',
+      description: 'In October 2024, i used Next.js, Firebase, Tailwind css and PostgreSQL to create a website for HIDET, a photo production company in recife!',
+      image1: '/img/sample/HIDET/1.png',
+      image2: '/img/sample/HIDET/2.png',
+      image3: '/img/sample/HIDET/3.png',
+      mainImage: '/img/sample/HIDET/main.png',
+      githubLink: 'https://github.com/CarlosAugustoP/hidet-productions',
+      stack: ['/img/firebase.svg', '/img/css.svg', '/img/ts.svg', '/img/react.svg', '/img/next.svg', '/img/postgresql.svg']
+    },
+    {
       title: 'Construtora P&V',
       description: 'In February 2024, it was an honor to develop and create the Peixoto and Vasconcelos Constructing company website!',
       image1: '/img/sample/PV/1.png',
@@ -72,6 +82,13 @@ function Projects() {
       stack: ['/img/html.svg', '/img/css.svg', '/img/js.svg', '/img/django.svg', '/img/python.svg', '/img/sqlite.svg']
     },
     {
+      title: 'Event Newsletter',
+      description: 'Developed in september 2024, Event Newsletter uses RabbitMQ to link a consumer developed in Spring Boot, a producer in Nest.js and an auditor in python',
+      videoLink: 'https://www.youtube.com/embed/asO_-25EUW8?si=aHsIXLjaDhBUl1qC>',
+      githubLink: 'https://github.com/CarlosAugustoP/event-newsletter',
+      stack: ['/img/nest.svg', '/img/springboot.svg', '/img/ts.svg', '/img/python.svg', '/img/rabbitmq.svg']
+    },
+    {
       title: 'Bridge',
       description: 'Built in  built for the discipline of Projects 3 for the client Caçadores de bons exemplos, using HTML, CSS, and Django once again.',
       image1: '/img/sample/Bridge/1.png',
@@ -81,10 +98,42 @@ function Projects() {
       githubLink: 'https://github.com/edmaaralencar/bridge-projetos',
       stack: ['/img/html.svg', '/img/css.svg', '/img/js.svg', '/img/tailwind.svg', '/img/django.svg', '/img/python.svg', '/img/sqlite.svg']
     },
+    {
+      title: 'C# Pokedex',
+      description: 'Currently in progress. Learning more about C# and microsoft Sequel Server by developing a rest API for a pokedex.',
+      mainImage: '/img/learn-c-sharp.png',
+      githubLink: 'https://github.com/CarlosAugustoP/learn-c-sharp',
+      stack: ['/img/c-sharp.svg', '/img/sqlserver.svg']      
+    },
+    {
+      title: 'Hunt Hub',
+      description: 'Currently in progress. Developing a website powered by spring boot that connects freelance developers to Product Owners using Domain Driven Design, Cucumber Tests and PostgreSQL.',
+      mainImage: '/img/learn-spring.png',
+      image1: '/img/sample/HuntHub/1.png',
+      image2: '/img/sample/HuntHub/2.png',
+      githubLink: 'https://github.com/CarlosAugustoP/hunt-hub',
+      stack: ['/img/springboot.svg', '/img/ts.svg', '/img/react.svg', '/img/next.svg', '/img/postgresql.svg', '/img/tailwind.svg', '/img/cucumber.svg']
+    },
+    {
+      title: 'Linux Shell',
+      description: 'This project implements a basic shell-like command interpreter in C that allows the user to execute commands sequentially or in parallel, with support for input/output redirection, pipes, and command history. It can either take commands interactively from the user or from a script file passed as a command-line argument.',
+      mainImage: '/img/shell.png',
+      githubLink: 'https://github.com/CarlosAugustoP/linux-shell',
+      stack: ['/img/c.svg']
+    },
+    {
+      title: 'Bankers Algorithm',
+      description: 'This project implements the Banker’s Algorithm for deadlock avoidance in C, reading txt files for commands. It was developed for my Operating Systems discipline.',
+      mainImage: '/img/sample/banker/1.png',
+      image1: '/img/sample/banker/2.png',
+      image2: '/img/sample/banker/3.png',
+      githubLink: 'https://github.com/CarlosAugustoP/linux-shell',
+      stack: ['/img/c.svg']
+    }
   ];
   
 
-  const [backgroundImage, setBackgroundImage] = useState(projects[0].mainImage);
+  const [backgroundContent, setBackgroundContent] = useState({ type: 'image', content: projects[0].mainImage });
   const [projectIndex, setProjectIndex] = useState(0);
   const [lastScrollTime, setLastScrollTime] = useState(Date.now());
   const [animate, setAnimate] = useState(false);
@@ -96,7 +145,6 @@ function Projects() {
     };
 
     checkMobile();
-
     window.addEventListener('resize', checkMobile);
 
     return () => {
@@ -107,16 +155,26 @@ function Projects() {
   const { toast } = useToast();
 
   const handleImageHover = (image) => {
-    setBackgroundImage(image);
+    setBackgroundContent({ type: 'image', content: image });
   };
 
   const handleImageMouseLeave = () => {
-    setBackgroundImage(projects[projectIndex].mainImage);
+    const project = projects[projectIndex];
+    setBackgroundContent(
+      project.videoLink
+        ? { type: 'video', content: project.videoLink }
+        : { type: 'image', content: project.mainImage }
+    );
   };
 
   const handleProjectChange = (newIndex) => {
     setProjectIndex(newIndex);
-    setBackgroundImage(projects[newIndex].mainImage);
+    const project = projects[newIndex];
+    setBackgroundContent(
+      project.videoLink
+        ? { type: 'video', content: project.videoLink }
+        : { type: 'image', content: project.mainImage }
+    );
   };
 
   useEffect(() => {
@@ -125,9 +183,7 @@ function Projects() {
         event.preventDefault();
 
         const currentScrollTime = Date.now();
-        if (currentScrollTime - lastScrollTime < 500) {
-          return; // Add a minimum interval between transitions
-        }
+        if (currentScrollTime - lastScrollTime < 500) return;
 
         if (event.deltaY > 0 && projectIndex < projects.length - 1) {
           handleProjectChange(projectIndex + 1);
@@ -141,10 +197,7 @@ function Projects() {
       };
 
       window.addEventListener('wheel', handleScroll, { passive: false });
-
-      return () => {
-        window.removeEventListener('wheel', handleScroll);
-      };
+      return () => window.removeEventListener('wheel', handleScroll);
     }
   }, [projectIndex, projects.length, lastScrollTime, isMobile]);
 
@@ -166,23 +219,23 @@ function Projects() {
     <>
       {isMobile ? (
         <div className='bg-gradient-to-b from-black to-blue-400 flex flex-col items-center justify-center gap-30'>
-        <Navbar className='static' />
-
-        {projects.map((project, index) => (
-          <MobilePC
-            key={index}
-            mainImg={project.mainImage}
-            title={project.title}
-            description={project.description}
-            image1={project.image1}
-            image2={project.image2}
-            image3={project.image3}
-            githubLink={project.githubLink}
-            deployLink={project.deployLink}
-            stack={project.stack}
-          />
-        ))}
-      </div>
+          <Navbar className='static' />
+          {projects.map((project, index) => (
+            <MobilePC
+              key={index}
+              mainImg={project.mainImage}
+              title={project.title}
+              description={project.description}
+              image1={project.image1}
+              image2={project.image2}
+              image3={project.image3}
+              githubLink={project.githubLink}
+              deployLink={project.deployLink}
+              stack={project.stack}
+              videoLink={project.videoLink}
+            />
+          ))}
+        </div>
       ) : (
         <div 
           style={{ 
@@ -194,22 +247,37 @@ function Projects() {
             flexDirection:'column',
             alignItems:'center',
             justifyContent:'center',
-            
           }}
         >
           <Navbar className={'absolute'} />
-          <div
-            style={{
-              width: '100%',
-              height: '100%',
-              backgroundImage: `url(${backgroundImage})`,
-              backgroundSize: 'contain',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              transition: 'background-image 0.5s ease-in-out',
-              backgroundColor: 'black',
-            }}
-          />
+          {backgroundContent.type === 'image' ? (
+            <div
+              style={{
+                width: '100%',
+                height: '100%',
+                backgroundImage: `url(${backgroundContent.content})`,
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                transition: 'background-image 0.5s ease-in-out',
+                backgroundColor: 'black',
+              }}
+            />
+          ) : (
+            <iframe
+              width="100%"
+              height="100%"
+              src={backgroundContent.content}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                transition: 'opacity 0.5s ease-in-out',
+                backgroundColor: 'black',
+              }}
+            ></iframe>
+          )}
           <ProjectInfo 
             title={projects[projectIndex].title}
             description={projects[projectIndex].description}
@@ -228,6 +296,6 @@ function Projects() {
       )}
     </>
   );
-
 }
-  export default Projects;
+
+export default Projects;

@@ -2,14 +2,28 @@ import React, { useState, useEffect } from "react";
 import Image from 'next/image';
 import "../app/globals.css";
 
-export const ProjectInfo = ({ title, description, image1, image2, image3, githubLink, deployLink, stack = [], className, onImageHover, onImageMouseLeave, info }) => {
+export const ProjectInfo = ({ 
+    title, 
+    description, 
+    image1, 
+    image2, 
+    image3, 
+    videoLink,  
+    githubLink, 
+    deployLink, 
+    stack = [], 
+    className, 
+    onImageHover, 
+    onImageMouseLeave, 
+    info 
+}) => {
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
         setAnimate(true);
         const timer = setTimeout(() => {
             setAnimate(false);
-        }, 500); // Matches the duration of the animation
+        }, 500); 
 
         return () => clearTimeout(timer);
     }, [title, description, image1, image2, image3, githubLink, deployLink, stack]);
@@ -51,36 +65,57 @@ export const ProjectInfo = ({ title, description, image1, image2, image3, github
             <div className="flex items-center justify-between w-full">
                 <p className="text-white text-[1.vw] w-1/2">{description}</p>
                 <div className="flex gap-4">
-                    <Image 
-                        src={image1} 
-                        alt="Project Image 1" 
-                        width={96} 
-                        height={96} 
-                        className="rounded-lg object-cover cursor-pointer h-20 border-2 border-white" 
-                        onMouseEnter={() => onImageHover(image1)}
-                        onMouseLeave={onImageMouseLeave}
-                        loading="lazy"
-                    />
-                    <Image 
-                        src={image2} 
-                        alt="Project Image 2" 
-                        width={96} 
-                        height={96} 
-                        className="rounded-lg object-cover cursor-pointer h-20 border-2 border-white" 
-                        onMouseEnter={() => onImageHover(image2)}
-                        onMouseLeave={onImageMouseLeave}
-                        loading="lazy"
-                    />
-                    <Image 
-                        src={image3} 
-                        alt="Project Image 3" 
-                        width={96} 
-                        height={96} 
-                        className="rounded-lg object-cover cursor-pointer h-20 border-2 border-white" 
-                        onMouseEnter={() => onImageHover(image3)}
-                        onMouseLeave={onImageMouseLeave}
-                        loading="lazy"
-                    />
+                    {videoLink ? (
+                        <iframe 
+                            width="320" 
+                            height="180" 
+                            src={videoLink} 
+                            title="YouTube video player" 
+                            frameBorder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowFullScreen
+                            className="border-2 border-white rounded-lg"
+                        ></iframe>
+                    ) : (
+                        <>
+                            {image1 && (
+                                <Image 
+                                    src={image1} 
+                                    alt="Project Image 1" 
+                                    width={96} 
+                                    height={96} 
+                                    className="rounded-lg object-cover cursor-pointer h-20 border-2 border-white" 
+                                    onMouseEnter={() => onImageHover(image1)}
+                                    onMouseLeave={onImageMouseLeave}
+                                    loading="lazy"
+                                />
+                            )}
+                            {image2 && (
+                                <Image 
+                                    src={image2} 
+                                    alt="Project Image 2" 
+                                    width={96} 
+                                    height={96} 
+                                    className="rounded-lg object-cover cursor-pointer h-20 border-2 border-white" 
+                                    onMouseEnter={() => onImageHover(image2)}
+                                    onMouseLeave={onImageMouseLeave}
+                                    loading="lazy"
+                                />
+                            )}
+                            {image3 && (
+                                <Image 
+                                    src={image3} 
+                                    alt="Project Image 3" 
+                                    width={96} 
+                                    height={96} 
+                                    className="rounded-lg object-cover cursor-pointer h-20 border-2 border-white" 
+                                    onMouseEnter={() => onImageHover(image3)}
+                                    onMouseLeave={onImageMouseLeave}
+                                    loading="lazy"
+                                />
+                            )}
+                        </>
+                    )}
                 </div>
             </div>
             <hr className="border-white w-1/2" />
@@ -102,4 +137,4 @@ export const ProjectInfo = ({ title, description, image1, image2, image3, github
             </div>
         </div>
     );
-}
+};
