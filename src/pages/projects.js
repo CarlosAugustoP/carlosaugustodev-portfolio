@@ -17,6 +17,7 @@ function Projects() {
       image3: '/img/sample/HIDET/3.png',
       mainImage: '/img/sample/HIDET/main.png',
       githubLink: 'https://github.com/CarlosAugustoP/hidet-productions',
+      deployLink: 'https://hidet-productions.vercel.app/',
       stack: ['/img/firebase.svg', '/img/css.svg', '/img/ts.svg', '/img/react.svg', '/img/next.svg', '/img/postgresql.svg']
     },
     {
@@ -139,6 +140,7 @@ function Projects() {
   const [animate, setAnimate] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1024);
