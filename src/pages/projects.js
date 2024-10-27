@@ -12,9 +12,9 @@ function Projects() {
     {
       title: 'HIDET',
       description: 'In October 2024, i used Next.js, Firebase, Tailwind css and PostgreSQL to create a website for HIDET, a photo production company in recife!',
-      image1: '/img/sample/HIDET/1.png',
-      image2: '/img/sample/HIDET/2.png',
-      image3: '/img/sample/HIDET/3.png',
+      image1: '/img/sample/Hidet/1.png',
+      image2: '/img/sample/Hidet/2.png',
+      image3: '/img/sample/Hidet/3.png',
       mainImage: '/img/sample/HIDET/main.png',
       githubLink: 'https://github.com/CarlosAugustoP/hidet-productions',
       deployLink: 'https://hidet-productions.vercel.app/',
@@ -125,9 +125,9 @@ function Projects() {
     {
       title: 'Bankers Algorithm',
       description: 'This project implements the Banker’s Algorithm for deadlock avoidance in C, reading txt files for commands. It was developed for my Operating Systems discipline.',
-      mainImage: '/img/sample/banker/1.png',
-      image1: '/img/sample/banker/2.png',
-      image2: '/img/sample/banker/3.png',
+      mainImage: '/img/sample/Banker/1.png',
+      image1: '/img/sample/Banker/2.png',
+      image2: '/img/sample/Banker/3.png',
       githubLink: 'https://github.com/CarlosAugustoP/linux-shell',
       stack: ['/img/c.svg']
     }
@@ -140,7 +140,7 @@ function Projects() {
   const [animate, setAnimate] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  
+
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1024);
