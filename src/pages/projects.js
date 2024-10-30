@@ -100,10 +100,11 @@ function Projects() {
       stack: ['/img/html.svg', '/img/css.svg', '/img/js.svg', '/img/tailwind.svg', '/img/django.svg', '/img/python.svg', '/img/sqlite.svg']
     },
     {
-      title: 'C# Pokedex',
-      description: 'Currently in progress. Learning more about C# and microsoft Sequel Server by developing a rest API for a pokedex.',
+      title: 'C# Pokemon API',
+      description: 'Currently in progress. Learning more about C# and microsoft Sequel Server by developing a rest API for a pokemon review app, where owners can leave comments about pokemon',
       mainImage: '/img/learn-c-sharp.png',
       image1: '/img/sample/Pokedex/1.png',
+      image2: '/img/sample/Pokedex/2.png',
       githubLink: 'https://github.com/CarlosAugustoP/learn-c-sharp',
       stack: ['/img/c-sharp.svg', '/img/sqlserver.svg']      
     },
