@@ -38,5 +38,6 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-animate"), // Ensure the animate plugin is installed
+    require('tailwindcss-debug-screens'),
   ],
 };
