@@ -42,6 +42,14 @@ function Projects() {
       stack: ['/img/css.svg', '/img/js.svg', '/img/react.svg', '/img/next.svg', '/img/mysql.svg', '/img/springboot.svg', '/img/tailwind.svg', '/img/java.svg']
     },
     {
+      title: 'Image Scanner for electronics recycling',
+      description: 'Developed in November 2024 during a one day hackathon for Banco do Brasil, this app uses Google Vision API, Django and React to scan images of electronics and classify them as recyclable or not. It also rewards users with points and sends them confirmation emails, as well as keeping tabs of the storage in each unit.',
+      videoLink: 'https://www.youtube.com/embed/Q5-YA2Ylyag?si=W_VswWocNfutwsZs',
+      githubLink: 'https://github.com/paulo-campos-57/Upcycle-Crew',
+      stack: ['/img/react.svg', '/img/django.svg', '/img/python.svg', '/img/css.svg', '/img/js.svg', '/img/googlecloud.svg']
+
+    },
+    {
       title: 'Morfeu',
       description: 'Developed in july 2024 for Banco do Brasil and CESAR, Morfeu uses machine learning to generate synthetic data in a user-friendly manner, utilizing React, Flask and multiple AI libraries. The complete app was presented in a pitch to major bank shareholders.',
       image1: '/img/sample/Morfeu/1.jpg',
