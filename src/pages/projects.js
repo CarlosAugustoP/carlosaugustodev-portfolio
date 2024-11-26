@@ -119,9 +119,10 @@ function Projects() {
     {
       title: 'Hunt Hub',
       description: 'Currently in progress. Developing a website powered by spring boot that connects freelance developers to Product Owners using Domain Driven Design, Cucumber Tests and PostgreSQL.',
-      mainImage: '/img/learn-spring.png',
+      mainImage: '/img/sample/HuntHub/main.png',
       image1: '/img/sample/HuntHub/1.png',
       image2: '/img/sample/HuntHub/2.png',
+      image3: '/img/sample/HuntHub/3.png',
       githubLink: 'https://github.com/CarlosAugustoP/hunt-hub',
       stack: ['/img/springboot.svg', '/img/ts.svg', '/img/react.svg', '/img/next.svg', '/img/postgresql.svg', '/img/tailwind.svg', '/img/cucumber.svg']
     },
